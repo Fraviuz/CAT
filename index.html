@@ -10,23 +10,26 @@
 </head>
 <body>
     <div id="base" onscroll="testScroll()" >
-        <section class="section", id="sectionOne"><h1 id="testy">UNO</h1></section>
-        <section class="section", id="sectionTwo"><h1>DOS</h1></section>
-        <section class="section", id="sectionThree"><h1>TRES</h1></section>
-        <section class="section", id="sectionFour"><h1>CUATRO</h1></section>
+        <section class="section flex-container", id="section-one-background">
+          <header id="header-navigation-bar"><h1>top</h1></header>
+          <div id="section-one-content"><h1>bottom</h1></div>
+        </section>
+        <section class="section flex-container", id="sectionTwo"><h1>DOS</h1></section>
+        <section class="section flex-container", id="sectionThree"><h1>TRES</h1></section>
+        <section class="section flex-container", id="sectionFour"><h1>CUATRO</h1></section>
     </div>
     <nav id="navigator">
         <ul>
-            <li onclick="navigation('base', 1)"> <svg height="100" width="100">
+            <li class="navegador-lateral-li" onclick="navigation('base', 1)"> <svg height="100" width="100">
                 <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
               </svg> </li>
-            <li onclick="navigation('base', 2)"> <svg height="100" width="100">
+            <li class="navegador-lateral-li" onclick="navigation('base', 2)"> <svg height="100" width="100">
                 <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
               </svg> </li>
-            <li onclick="navigation('base', 3)"> <svg height="100" width="100">
+            <li class="navegador-lateral-li" onclick="navigation('base', 3)"> <svg height="100" width="100">
                 <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
               </svg> </li>
-            <li onclick="navigation('base', 4)"> <svg height="100" width="100">
+            <li class="navegador-lateral-li" onclick="navigation('base', 4)"> <svg height="100" width="100">
                 <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
               </svg> </i></li>
         </ul> 

@@ -4,7 +4,7 @@
     transition: all 750ms ease 0s;
 }
 
-#base, .section {
+div, #header-navigation-bar, .section, .header-navigation-bar {
     width: 100%;
 }
 
@@ -15,8 +15,15 @@
     padding-left: 5%;
 }
 
-#sectionOne {
+#section-one-background {
     background-color: white;
+    flex-direction: column;
+}
+
+#section-one-content {
+    height: 75%;
+    align-items: center;
+    justify-content: center;
 }
 
 #sectionTwo {
@@ -31,12 +38,33 @@
     background-color: rgb(94, 252, 80);
 }
 
-.section {
-    height: 25%; 
-    display: flex;
+#header-navigation-bar{
+    height: 25%;
     align-items: center;
     justify-content: center;
 }
+
+.flex-container {
+    display: flex;
+}
+
+.section {
+    height: 25%; 
+    align-items: center;
+    justify-content: center;
+}
+
+.navegador-lateral-li {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    color: red;
+}
+
+
 
 body {
     overflow: hidden;
@@ -47,23 +75,10 @@ h1 {
     color: brown;
     align-self: center;
     text-align: center;
-    font-size: 10rem;
-}
-
-li {
-    display: block;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    color: red;
-}
-
-a{
-    text-decoration: none;
+    font-size: 9rem;
 }
 
 ul{
     padding: 0%;
 }
+
