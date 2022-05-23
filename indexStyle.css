@@ -1,0 +1,69 @@
+#base {
+    height: 400vh;
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 750ms ease 0s;
+}
+
+#base, .section {
+    width: 100%;
+}
+
+#navigator {
+    position: fixed;
+    z-index: 100;
+    top: 25%;
+    padding-left: 5%;
+}
+
+#sectionOne {
+    background-color: white;
+}
+
+#sectionTwo {
+    background-color: rgb(39, 145, 231);
+}
+
+#sectionThree {
+    background-color: rgb(248, 71, 71);
+}
+
+#sectionFour {
+    background-color: rgb(94, 252, 80);
+}
+
+.section {
+    height: 25%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    overflow: hidden;
+    margin: 0%;
+}
+
+h1 {
+    color: brown;
+    align-self: center;
+    text-align: center;
+    font-size: 10rem;
+}
+
+li {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    color: red;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    padding: 0%;
+}
