@@ -17,10 +17,22 @@ div, #header-navigation-bar, .section, .header-navigation-bar {
 
 #section-one-background {
     background-color: white;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 0.5fr repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 #section-one-content {
+    grid-area: 2 / 2 / 6 / 3;
+    height: 75%;
+    align-items: center;
+    justify-content: center;
+}
+
+#section-one-content-two {
+    grid-area: 2 / 3 / 6 / 4;
     height: 75%;
     align-items: center;
     justify-content: center;
@@ -39,9 +51,9 @@ div, #header-navigation-bar, .section, .header-navigation-bar {
 }
 
 #header-navigation-bar{
+    grid-area: 1 / 1 / 2 / 6;
     height: 25%;
     align-items: center;
-    justify-content: center;
 }
 
 .flex-container {
@@ -64,7 +76,28 @@ div, #header-navigation-bar, .section, .header-navigation-bar {
     color: red;
 }
 
-
+.flex-container {
+    margin: 2.5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: normal;
+    align-content: center;
+  }
+  
+  .flex-container li {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    height: 100%;
+    width: 10%;
+  }
+  
+  
 
 body {
     overflow: hidden;
@@ -81,4 +114,3 @@ h1 {
 ul{
     padding: 0%;
 }
-
