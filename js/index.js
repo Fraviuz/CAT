@@ -8,6 +8,14 @@ function getCurrentPosition(){
     return currentPosition
 }
 
+function toggleForm(){
+    if (document.getElementById('form-container').style.display=='none') {
+        document.getElementById('form-container').style.display = 'block'
+    } else {
+        document.getElementById('form-container').style.display = 'none'
+    }
+}
+
 function navigation(target, posicion) {
     if (posicion==1) {
         document.getElementById(target).style.transform = 'translate3d(0px, 0px, 0px)'

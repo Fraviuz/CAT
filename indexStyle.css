@@ -10,7 +10,7 @@ div, #header-navigation-bar, .section, .header-navigation-bar {
 
 #navigator {
     position: fixed;
-    z-index: 100;
+    z-index: 1;
     top: 25%;
     padding-left: 5%;
 }
@@ -47,13 +47,34 @@ div, #header-navigation-bar, .section, .header-navigation-bar {
 }
 
 #sectionFour {
-    background-color: rgb(94, 252, 80);
+    background-color: #F5831B;
 }
 
 #header-navigation-bar{
     grid-area: 1 / 1 / 2 / 6;
     height: 25%;
     align-items: center;
+}
+
+#form-container{
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.281);
+    top: 0%;
+    display: none;
+}
+
+#form-button{
+    background-color: #A85609;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    align-self: center;
 }
 
 .section {
