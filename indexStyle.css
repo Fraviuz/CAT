@@ -60,7 +60,7 @@ div, #header-navigation-bar, .section, .header-navigation-bar {
     position: fixed;
     z-index: 2;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.281);
+    background-color: rgba(0, 0, 0, 0.527);
     top: 0%;
     display: none;
 }
@@ -129,4 +129,12 @@ h1 {
 
 ul{
     padding: 0%;
+}
+
+form {
+    padding: 5%;
+}
+
+fieldset input, fieldset textarea{
+    width: 100%;
 }
