@@ -1,89 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="indexStyle.css">
-    <script src="js/index.js"></script>
-    <title>Cats and Dogs</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="indexStyle.css">
+  <script src="js/index.js"></script>
+  <title>Cats and Dogs</title>
 </head>
-<body>
-    <div id="base" onscroll="testScroll()" >
-        <section class="section flex-container" id="section-one-background">
-          <header id="header-navigation-bar">
-            <ul class="flex-container">
-              <li>:)</li>
-              <li onclick="navigation('base', 1)">Inicio</li>
-              <li onclick="navigation('base', 2)">SeccionUno</li>
-              <li onclick="navigation('base', 3)">SeccionDos</li>
-              <li onclick="navigation('base', 4)">SeccionTres</li>
-            </ul>
-          </header>
-          <div id="section-one-content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-          <div id="section-one-content-two"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-        </section>
-        <section class="section flex-container" id="sectionTwo"><h1>DOS</h1></section>
-        <section class="section flex-container" id="sectionThree"><h1>TRES</h1></section>
-        <section class="section flex-container" id="sectionFour">
-          <button type="button" id="form-button" onclick="toggleForm()">Click Me!</button>
-        </section>
+
+<body id="#body">
+  <!-- Div id "base" contiene las cuatro principales secciones de la pagina ubicados en la "capa" o z-index base abajo de todos -->
+  <div id="base">
+    <!-- Section id "section-one-background" contiene la primera seccion que se ve al abrir la pagina, esta a su ves contiene el header con botones de navegacion, esta es un contenedor grid-->
+    <section class="section" id="section-one-background">
+      <header id="header-navigation-bar">
+        <ul class="flex-container">
+          <li>:)</li>
+          <li onclick="navigation('base', 1)">GATOS!</li>
+          <li onclick="navigation('base', 2)">SeccionUno</li>
+          <li onclick="navigation('base', 3)">SeccionDos</li>
+          <li onclick="navigation('base', 4)">SeccionTres</li>
+        </ul>
+      </header>
+      <div id="section-one-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.</p>
+      </div>
+      <div id="section-one-content-two">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.</p>
+      </div>
+    </section>
+    
+    <section class="section flex-container" id="sectionTwo">
+    </section>
+
+    <section class="section flex-container" id="sectionThree">
+      <div class="map-section">
+        <div class="contenedor-mapa"><iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2996803.887843598!2d136.80190690620793!3d34.62795698323473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scat%20cafe%20japan!5e0!3m2!1sen!2sar!4v1654263566119!5m2!1sen!2sar"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="texto-mapa">
+            <h1>MAPA</h1>
+            <p>Este es un mapa que demuestra la habilidad de colocar un mapa, algunos se preguntaran ¿porque hay un mapa aqui?, ¿porque dedicar una seccion completa par un mapa? o ¿Que tiene que ver este mapa con gatos?. Tranquilos, todas estas preguntas y mas voy a responder ahora mismo.<br>
+            SI.
+            </p>
+        </div>
     </div>
-    <nav id="navigator">
-        <ul>
-            <li class="navegador-lateral-li" onclick="navigation('base', 1)"> <svg height="100" width="100">
-                <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
-              </svg> </li>
-            <li class="navegador-lateral-li" onclick="navigation('base', 2)"> <svg height="100" width="100">
-                <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
-              </svg> </li>
-            <li class="navegador-lateral-li" onclick="navigation('base', 3)"> <svg height="100" width="100">
-                <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
-              </svg> </li>
-            <li class="navegador-lateral-li" onclick="navigation('base', 4)"> <svg height="100" width="100">
-                <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
-              </svg> </li>
-        </ul> 
-    </nav>
-    <div id="form-container">
+    </section>
+
+    <section class="section flex-container" id="sectionFour">
       <button type="button" id="form-button" onclick="toggleForm()">Click Me!</button>
-      <form class="generated-form"  method="GET" action="submit.php"  target="_self">
-        <fieldset>
-          <label for="text">Text:</label><br>
-            <input type="text" id="text" name="text"><br>
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password"><br>
-            <label for="password">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="number">Number:</label><br>
-            <input type="number" id="number" name="number"><br>
-            <label for="url">Url:</label><br>
-            <input type="url" id="url" name="url"><br>
-            <label for="file">File:</label><br>
-            <input type="file" id="file" name="file"><br><br>
-            <label for="cars">Choose a car:</label><br>
-            <select id="cars">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </select> <br><br>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label><br><br>
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-            <label for="vehicle1"> I have a bike</label><br>
-            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-            <label for="vehicle2"> I have a car</label><br>
-            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-            <label for="vehicle3"> I have a boat</label><br><br>
-            <textarea id="w3codeGenText" name="textarea" rows="3" cols="50"></textarea><br><br>
-            <input type="submit" value="Submit"><br><br>
-        </fieldset>
-      </form>
+    </section>
+  </div>
+  <nav id="navigator">
+    <ul>
+      <li class="navegador-lateral-li" onclick="navigation('base', 1)"> <svg height="100" width="100">
+          <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
+        </svg> </li>
+      <li class="navegador-lateral-li" onclick="navigation('base', 2)"> <svg height="100" width="100">
+          <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
+        </svg> </li>
+      <li class="navegador-lateral-li" onclick="navigation('base', 3)"> <svg height="100" width="100">
+          <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
+        </svg> </li>
+      <li class="navegador-lateral-li" onclick="navigation('base', 4)"> <svg height="100" width="100">
+          <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
+        </svg> </li>
+    </ul>
+  </nav>
+  <div id="plano-formulario">
+    <div class="form-container">
+
+    <header>Datos totalmente "privados"</header>
+
+    <form action="#">
+      <div class="form first">
+        <div class="details personal">
+          <span class="title">Datos parsonales</span>
+
+          <div class="fields">
+            <div class="input-field">
+              <label>Nombre y apellido</label>
+              <input type="text" placeholder="DiMe tu NOMBRE" required>
+            </div>
+
+            <div class="input-field">
+              <label>Fecha de nacimiento</label>
+              <input type="date" placeholder="DiMe tu NACER!" required>
+            </div>
+
+            <div class="input-field">
+              <label>Email</label>
+              <input type="text" placeholder="Escriba su correo" required>
+            </div>
+
+            <div class="input-field">
+              <label>Numero de telefono</label>
+              <input type="number" placeholder="Prometo no llamar" required>
+            </div>
+
+            <div class="input-field">
+              <label>Cual es tu animal favorito?</label>
+              <select required>
+                <option disabled selected>Selecciona correctamente</option>
+                <option>Gato</option>
+                <option>Cat</option>
+                <option>Neko</option>
+                <option>...perro</option>
+              </select>
+            </div>
+
+            <div class="input-field">
+              <label>Una breve descripcion de ti mismo</label>
+              <input type="text" placeholder="Quiero saber de ti" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="details ID">
+          <span class="title">Preguntas importantes</span>
+
+          <div class="fields">
+            <div class="input-field">
+              <label>¿Es un gato liquido?</label>
+              <select required>
+                <option disabled selected>Selecciona correctamente</option>
+                <option>Si</option>
+                <option>No</option>
+                <option>Depende de si la pregunta se refiere al estado natural de un gato, tecnicamente ...</option>
+                <!--habia escrito un parrafo completo pero al final creo que esto basta-->
+              </select>
+            </div>
+
+            <div class="input-field">
+              <label>¿Como llamarias tu idolo gatuno?</label>
+              <input type="text" placeholder="DiMe tu JeFe SUPREMO" required>
+            </div>
+
+            <div class="input-field">
+              <label>¿Si fueras un gato, que tipo de gato serias?</label>
+              <input type="text" placeholder="" required>
+            </div>
+
+            <div class="input-field">
+              <label>¿Cuantos gatos nesecitas para destruir el mundo?</label>
+              <input type="number" placeholder="Ejemplo 666" required>
+            </div>
+
+            <div class="input-field">
+              <label>¿Cual es tu fecha favorita?</label>
+              <input type="date" placeholder="Culaquier fecha" required>
+            </div>
+
+            <div class="input-field">
+              <label>Dime un buen chiste</label>
+              <input type="text" placeholder="Tiene que ser bueno" required>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="sumbit">
+              <span class="btnText">Submit</span>
+              <i class="uil uil-navigator"></i>
+            </button>
+
+            <div class="backBtn">
+              <i class="uil uil-navigator"></i>
+              <span onclick="toggleForm()">Cancelar</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </body>
 </html>

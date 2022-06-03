@@ -1,4 +1,4 @@
-//Java script es usado para permitir hacer un par de cosas, navegar la pagina por secciones a travez de la funcione "navigation" la cual es usada por es navegador que se encuentra a la izquerda, el navegador en el header y un "event listener" que observa cuando se usa la rueda del mause se mueve. La otra funcion qeu cumple es poder mostrar el formulario yesconderlo al ser cerrado o completado
+//Java script es usado para permitir hacer un par de cosas, navegar la pagina por secciones a travez de la funcione "navigation" la cual es usada por es navegador que se encuentra a la izquerda, el navegador en el header y un "event listener" que observa cuando se usa la rueda del mause se mueve. La otra funcion que cumple es poder mostrar el formulario yesconderlo al ser cerrado o completado
 
 //la variable "curentPosition" permite a la funcion "changePosition" saber en que posicion de la pagine se encuetra el usuario, default es 1 que reprecenta el inicio de la pagina, ideal seria tambien definir el la posicion maxima y colocar todas estas propiedades y funciones en una clase
 
@@ -41,9 +41,13 @@ function navigation(target, posicion) {
 
 // "EventListener" se encarga de identificar cuando es usado la rueda del mause y a que direccion, luego llama a la funcion "changePosition(direction)" con la dicha direccion que permite hacer un control para no trasladar la vista fuera del contenido.
 
+// Se agrego una condicion screen width para que solo funcione en PC y laptops, hay otras maneras de hacerlo pero esta evita un problema donde cuado se reverte se puede navegar fuera de la pantalla, otra opcion es ver en que pocicion el usuario se encuentra.
+
 window.addEventListener("wheel", event => {
     let delta = Math.sign(event.deltaY);
-    changePosition(delta);
+    if (screen.width > 1023){
+        changePosition(delta);
+    }
 });
 
 function changePosition(direction) {
@@ -66,11 +70,12 @@ function changePosition(direction) {
 // La funcion "toggleForm()" permite mostrar y ocultar tanto el formulario indicado por "form-container" y el navegador lateral indicado por "navigator", hay un control que permite identificar cual va a mostrar y ocultar.
 
 function toggleForm(){
-    if (document.getElementById('form-container').style.display=='none') {
-        document.getElementById('form-container').style.display = 'block'
+    if (document.getElementById('plano-formulario').style.display=='none') {
+        document.getElementById('plano-formulario').style.display = 'flex'
         document.getElementById('navigator').style.display = 'none'
     } else {
-        document.getElementById('form-container').style.display = 'none'
+        document.getElementById('plano-formulario').style.display = 'none'
         document.getElementById('navigator').style.display = 'block'
     }
 }
+

@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*-01 Seccion Inicio de la paguina*/
+
+/*-A contenedor flex y sus hijos */
+
+#inicio{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#inicio > #header-navigation-bar{
+    height: 10%;
+}
+
+#inicio > div{
+    height: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+/*-A.1 Header */
+
+#header-navigation-bar > ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    height: 100%;
+}
+
+#header-navigation-bar li{
+    margin: 2rem;
+    width: auto;
+    list-style-type: none;
+}
+
+.cat {
+    background-color: #F5831B;
+    border-radius: 9999px;
+    box-sizing: border-box;
+    border: 0 solid #e2e8f0;
+    padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+}
+
+/*-A.2 Contenido de seccion Inicio */
+
