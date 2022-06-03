@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="indexStyle.css">
+  <script src="https://kit.fontawesome.com/5c97971593.js" crossorigin="anonymous"></script>
   <script src="js/index.js"></script>
   <title>Cats and Dogs</title>
 </head>
@@ -14,31 +15,28 @@
   <!-- Div id "base" contiene las cuatro principales secciones de la pagina ubicados en la "capa" o z-index base abajo de todos -->
   <div id="base">
     <!-- Section id "section-one-background" contiene la primera seccion que se ve al abrir la pagina, esta a su ves contiene el header con botones de navegacion, esta es un contenedor grid-->
-    <section class="section" id="section-one-background">
+    <section id="inicio">
       <header id="header-navigation-bar">
-        <ul class="flex-container">
-          <li>:)</li>
-          <li onclick="navigation('base', 1)">GATOS!</li>
-          <li onclick="navigation('base', 2)">SeccionUno</li>
-          <li onclick="navigation('base', 3)">SeccionDos</li>
-          <li onclick="navigation('base', 4)">SeccionTres</li>
-        </ul>
+          <ul>
+              <li onclick="navigation('base', 1)"><i class="fa-solid fa-cat fa-2xl"></i></li>
+              <li class="cat" onclick="navigation('base', 1)">CATS!</li>
+              <li onclick="navigation('base', 2)">HISTORY</li>
+              <li onclick="navigation('base', 3)">MAPA</li>
+              <li onclick="navigation('base', 4)">YOUR DATA</li>
+          </ul>
       </header>
-      <div id="section-one-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.</p>
+      <div class="contenedor-contenido">
+          <div>
+              <h1>CATS!... CATS?... CATS!</h1>
+              <p>¿Que es un gato? ¿como es un gato? ¿Porque un gato? Estas son greguntas que estoy seguro te hs
+                  preguntado en algun momento de tu vida. <br>
+                  Esta paguina no ofrece ninguna y todas las respuestas a estas preguntas, buena suerte.</p>
+          </div>
+          <div>
+              <img src="img/cat-stretch-black-silhouette.png" alt="Silueta de un gato">
+          </div>
       </div>
-      <div id="section-one-content-two">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.</p>
-      </div>
-    </section>
+  </section>
     
     <section class="section flex-container" id="sectionTwo">
     </section>

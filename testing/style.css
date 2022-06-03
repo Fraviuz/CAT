@@ -23,7 +23,7 @@
     height: 10%;
 }
 
-#inicio > div{
+#inicio > .contenedor-contenido{
     height: 90%;
     display: flex;
     flex-wrap: nowrap;
@@ -61,3 +61,36 @@
 
 /*-A.2 Contenido de seccion Inicio */
 
+/* Estilo del texto */
+
+.contenedor-contenido > div{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+}
+
+.contenedor-contenido > div *{
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contenedor-contenido > div h1 {
+    color: #F5831B;
+    font-size: 3rem;
+}
+
+.contenedor-contenido > div p {
+    font-size: 1.5rem;
+}
+
+/* Estilo de la imagen */
+
+img {
+    width: auto;
+    height: 100%;
+}
