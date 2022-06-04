@@ -428,7 +428,7 @@ form .buttons button , .backBtn{
 
     .contenedor-contenido > div h1 {
         color: #F5831B;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 700
     }
     
@@ -439,9 +439,27 @@ form .buttons button , .backBtn{
     /* Estilo de la imagen */
     
     .contenedor-contenido img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contenedor-contenido > div h1 {
+        color: #F5831B;
+        font-size: 1.5rem;
+        font-weight: 700
+    }
+    
+    .contenedor-contenido > div p {
+        font-size: 1rem;
+    }
+    
+    /* Estilo de la imagen */
+    
+    .contenedor-contenido img {
         width: auto;
         height: 100%;
     }
+
 }
 
 @media (max-width: 550px) {
