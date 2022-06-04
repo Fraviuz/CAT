@@ -225,7 +225,7 @@
     color: #0000004f;
 }
 
-/* Something more */
+/*--- 05 Estilo para el formulario---*/
 
 #plano-formulario {
     position: fixed;
@@ -237,17 +237,6 @@
     justify-content: center;
     top: 0%;
 }
-
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: normal;
-    align-content: center;
-}
-
-/*---Estilo para el formulario---*/
 
 fieldset input,
 fieldset textarea {
