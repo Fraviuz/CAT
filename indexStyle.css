@@ -384,6 +384,7 @@ form .buttons button , .backBtn{
     .texto-mapa {
         padding-left: 25%;
     }
+
 }
 
 @media (max-width: 750px) {
@@ -421,6 +422,25 @@ form .buttons button , .backBtn{
     }
     form .fields .input-field{
         width: calc(100% / 2 - 15px);
+    }
+
+    /* Inicio */
+
+    .contenedor-contenido > div h1 {
+        color: #F5831B;
+        font-size: 1.5rem;
+        font-weight: 700
+    }
+    
+    .contenedor-contenido > div p {
+        font-size: 0.5rem;
+    }
+    
+    /* Estilo de la imagen */
+    
+    .contenedor-contenido img {
+        width: auto;
+        height: 100%;
     }
 }
 
