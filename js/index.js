@@ -75,3 +75,8 @@ function toggleForm(){
     }
 }
 
+//Comprobante de movil para que puedan navegar la pagina
+
+if (screen.width < 1024){
+    document.getElementById('body').style.overflow = 'scroll'
+}
