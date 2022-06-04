@@ -181,6 +181,12 @@
     border-radius: 9999px;
     box-sizing: border-box;
     border: 0 solid #e2e8f0;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#form-section button:hover {
+    background-color: #f5841bb6;
 }
 
 /*--- 04 Navegador ---*/
