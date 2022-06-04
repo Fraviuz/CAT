@@ -394,6 +394,7 @@ form .buttons button , .backBtn{
     }
     
     /* Inicio */
+
     #inicio > .contenedor-contenido{
         flex-direction: column;
     }
@@ -408,39 +409,8 @@ form .buttons button , .backBtn{
         padding-right: 1rem;
     }
 
-    /* Mapa */
-    .texto-mapa {
-        padding-left: 0%;
-    }
-
-    /* Formulario */
-    .form-container form{
-        overflow-y: scroll;
-    }
-    .form-container form::-webkit-scrollbar{
-       display: none;
-    }
-    form .fields .input-field{
-        width: calc(100% / 2 - 15px);
-    }
-
-    /* Inicio */
-
-    .contenedor-contenido > div h1 {
-        color: #F5831B;
-        font-size: 1rem;
-        font-weight: 700
-    }
-    
-    .contenedor-contenido > div p {
-        font-size: 0.5rem;
-    }
-    
-    /* Estilo de la imagen */
-    
-    .contenedor-contenido img {
-        width: 100%;
-        height: auto;
+    #header-navigation-bar li{
+        margin: 1rem;
     }
 
     .contenedor-contenido > div h1 {
@@ -458,6 +428,22 @@ form .buttons button , .backBtn{
     .contenedor-contenido img {
         width: auto;
         height: 100%;
+    }
+
+    /* Mapa */
+    .texto-mapa {
+        padding-left: 0%;
+    }
+
+    /* Formulario */
+    .form-container form{
+        overflow-y: scroll;
+    }
+    .form-container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
     }
 
 }
