@@ -15,172 +15,178 @@
   <!-- Div id "base" contiene las cuatro principales secciones de la pagina ubicados en la "capa" o z-index base abajo de todos -->
   <div id="base">
     <!-- Section id "section-one-background" contiene la primera seccion que se ve al abrir la pagina, esta a su ves contiene el header con botones de navegacion, esta es un contenedor grid-->
-    <section id="inicio">
+    <section class="section" id="inicio">
+
       <header id="header-navigation-bar">
-          <ul>
-              <li onclick="navigation('base', 1)"><i class="fa-solid fa-cat fa-2xl"></i></li>
-              <li class="cat" onclick="navigation('base', 1)">CATS!</li>
-              <li onclick="navigation('base', 2)">HISTORY</li>
-              <li onclick="navigation('base', 3)">MAPA</li>
-              <li onclick="navigation('base', 4)">YOUR DATA</li>
-          </ul>
+        <ul>
+          <li onclick="navigation('base', 1)"><i class="fa-solid fa-cat fa-2xl"></i></li>
+          <li class="cat" onclick="navigation('base', 1)">CATS!</li>
+          <li onclick="navigation('base', 2)">MAPA</li>
+          <li onclick="navigation('base', 3)">TU DATA</li>
+        </ul>
       </header>
       <div class="contenedor-contenido">
-          <div>
-              <h1>CATS!... CATS?... CATS!</h1>
-              <p>¿Que es un gato? ¿como es un gato? ¿Porque un gato? Estas son greguntas que estoy seguro te hs
-                  preguntado en algun momento de tu vida. <br>
-                  Esta paguina no ofrece ninguna y todas las respuestas a estas preguntas, buena suerte.</p>
-          </div>
-          <div>
-              <img src="img/cat-stretch-black-silhouette.png" alt="Silueta de un gato">
-          </div>
+        <div>
+          <h1>CATS! CATS? CATS!</h1>
+          <p>¿Qué es un gato? ¿Cómo es un gato? ¿Porque un gato? Estas son preguntas que estoy seguro te has hecho en
+            algún momento de tu vida. <br>
+            Esta página no ofrece ninguna y todas las respuestas a estas preguntas, buena suerte.</p>
+        </div>
+        <div>
+          <img src="img/cat-stretch-black-silhouette.png" alt="Silueta de un gato">
+        </div>
       </div>
-  </section>
-    
-    <section class="section flex-container" id="sectionTwo">
     </section>
 
-    <section class="section flex-container" id="sectionThree">
+<!--Seccion del mapa-->
+
+    <section class="section">
       <div class="map-section">
         <div class="contenedor-mapa"><iframe
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2996803.887843598!2d136.80190690620793!3d34.62795698323473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scat%20cafe%20japan!5e0!3m2!1sen!2sar!4v1654263566119!5m2!1sen!2sar"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2996803.887843598!2d136.80190690620793!3d34.62795698323473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scat%20cafe%20japan!5e0!3m2!1sen!2sar!4v1654263566119!5m2!1sen!2sar"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="texto-mapa">
-            <h1>MAPA</h1>
-            <p>Este es un mapa que demuestra la habilidad de colocar un mapa, algunos se preguntaran ¿porque hay un mapa aqui?, ¿porque dedicar una seccion completa par un mapa? o ¿Que tiene que ver este mapa con gatos?. Tranquilos, todas estas preguntas y mas voy a responder ahora mismo.<br>
+          <h1>MAPA</h1>
+          <p>Este es un mapa que demuestra la habilidad de colocar un mapa, algunos se preguntaran ¿porque hay un mapa
+            aqui?, ¿porque dedicar una seccion completa par un mapa? o ¿Que tiene que ver este mapa con gatos?.
+            Tranquilos, todas estas preguntas y mas voy a responder ahora mismo.<br>
             SI.
-            </p>
+          </p>
         </div>
-    </div>
+      </div>
     </section>
 
-    <section class="section flex-container" id="sectionFour">
-      <button type="button" id="form-button" onclick="toggleForm()">Click Me!</button>
+<!--Seccion de acceso al formulatio-->
+
+    <section class="section" id="form-section">
+      <div>
+        <h1>¿Quieres hablar con nosotros?</h1>
+        <p>Perfecto! Ya sea para dejar una critica o para simplemente hablar con nosotros! (debido a la soledad de la vida moderna). <br> Estamos mas que disponibles!! solo tiene que dejar sus datos y responder unas simples preguntas!</p>
+        <button type="button" id="form-button" onclick="toggleForm()"><i class="fa-solid fa-cat fa-2xl"></i>"mew"</button>
+      </div>
     </section>
+
   </div>
-  <nav id="navigator">
-    <ul>
-      <li class="navegador-lateral-li" onclick="navigation('base', 1)"> <svg height="100" width="100">
-          <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
-        </svg> </li>
-      <li class="navegador-lateral-li" onclick="navigation('base', 2)"> <svg height="100" width="100">
-          <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
-        </svg> </li>
-      <li class="navegador-lateral-li" onclick="navigation('base', 3)"> <svg height="100" width="100">
-          <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
-        </svg> </li>
-      <li class="navegador-lateral-li" onclick="navigation('base', 4)"> <svg height="100" width="100">
-          <circle cx="50" cy="50" r="4" stroke="black" stroke-width="3" fill="white" />
-        </svg> </li>
+
+  <!--Navegador lateral izquierdo-->
+
+  <nav id="navegador-lateral">
+    <ul id="navedador-lateral-ul">
+      <li onclick="navigation('base', 1)"><i class="fa-solid fa-circle"></i></li>
+      <li onclick="navigation('base', 2)"><i class="fa-solid fa-circle"></i></li>
+      <li onclick="navigation('base', 3)"><i class="fa-solid fa-circle"></i></li>
     </ul>
   </nav>
+
+  <!-- Formulario -->
+
   <div id="plano-formulario">
     <div class="form-container">
 
-    <header>Datos totalmente "privados"</header>
+      <header>Datos totalmente "privados"</header>
 
-    <form action="#">
-      <div class="form first">
-        <div class="details personal">
-          <span class="title">Datos parsonales</span>
+      <form action="#">
+        <div class="form first">
+          <div class="details personal">
+            <span class="title">Datos parsonales</span>
 
-          <div class="fields">
-            <div class="input-field">
-              <label>Nombre y apellido</label>
-              <input type="text" placeholder="DiMe tu NOMBRE" required>
+            <div class="fields">
+              <div class="input-field">
+                <label>Nombre y apellido</label>
+                <input type="text" placeholder="DiMe tu NOMBRE" required>
+              </div>
+
+              <div class="input-field">
+                <label>Fecha de nacimiento</label>
+                <input type="date" placeholder="DiMe tu NACER!" required>
+              </div>
+
+              <div class="input-field">
+                <label>Email</label>
+                <input type="text" placeholder="Escriba su correo" required>
+              </div>
+
+              <div class="input-field">
+                <label>Numero de telefono</label>
+                <input type="number" placeholder="Prometo no llamar" required>
+              </div>
+
+              <div class="input-field">
+                <label>Cual es tu animal favorito?</label>
+                <select required>
+                  <option disabled selected>Selecciona correctamente</option>
+                  <option>Gato</option>
+                  <option>Cat</option>
+                  <option>Neko</option>
+                  <option>...perro</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label>Una breve descripcion de ti mismo</label>
+                <input type="text" placeholder="Quiero saber de ti" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="details ID">
+            <span class="title">Preguntas importantes</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label>¿Es un gato liquido?</label>
+                <select required>
+                  <option disabled selected>Selecciona correctamente</option>
+                  <option>Si</option>
+                  <option>No</option>
+                  <option>Depende de si la pregunta se refiere al estado natural de un gato, tecnicamente ...</option>
+                  <!--habia escrito un parrafo completo pero al final creo que esto basta-->
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label>¿Como llamarias tu idolo gatuno?</label>
+                <input type="text" placeholder="DiMe tu JeFe SUPREMO" required>
+              </div>
+
+              <div class="input-field">
+                <label>¿Si fueras un gato, que tipo de gato serias?</label>
+                <input type="text" placeholder="" required>
+              </div>
+
+              <div class="input-field">
+                <label>¿Cuantos gatos nesecitas para destruir el mundo?</label>
+                <input type="number" placeholder="Ejemplo 666" required>
+              </div>
+
+              <div class="input-field">
+                <label>¿Cual es tu fecha favorita?</label>
+                <input type="date" placeholder="Culaquier fecha" required>
+              </div>
+
+              <div class="input-field">
+                <label>Dime un buen chiste</label>
+                <input type="text" placeholder="Tiene que ser bueno" required>
+              </div>
             </div>
 
-            <div class="input-field">
-              <label>Fecha de nacimiento</label>
-              <input type="date" placeholder="DiMe tu NACER!" required>
-            </div>
+            <div class="buttons">
+              <button class="sumbit">
+                <span class="btnText">Submit</span>
+                <i class="uil uil-navigator"></i>
+              </button>
 
-            <div class="input-field">
-              <label>Email</label>
-              <input type="text" placeholder="Escriba su correo" required>
-            </div>
-
-            <div class="input-field">
-              <label>Numero de telefono</label>
-              <input type="number" placeholder="Prometo no llamar" required>
-            </div>
-
-            <div class="input-field">
-              <label>Cual es tu animal favorito?</label>
-              <select required>
-                <option disabled selected>Selecciona correctamente</option>
-                <option>Gato</option>
-                <option>Cat</option>
-                <option>Neko</option>
-                <option>...perro</option>
-              </select>
-            </div>
-
-            <div class="input-field">
-              <label>Una breve descripcion de ti mismo</label>
-              <input type="text" placeholder="Quiero saber de ti" required>
+              <div class="backBtn">
+                <i class="uil uil-navigator"></i>
+                <span onclick="toggleForm()">Cancelar</span>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="details ID">
-          <span class="title">Preguntas importantes</span>
-
-          <div class="fields">
-            <div class="input-field">
-              <label>¿Es un gato liquido?</label>
-              <select required>
-                <option disabled selected>Selecciona correctamente</option>
-                <option>Si</option>
-                <option>No</option>
-                <option>Depende de si la pregunta se refiere al estado natural de un gato, tecnicamente ...</option>
-                <!--habia escrito un parrafo completo pero al final creo que esto basta-->
-              </select>
-            </div>
-
-            <div class="input-field">
-              <label>¿Como llamarias tu idolo gatuno?</label>
-              <input type="text" placeholder="DiMe tu JeFe SUPREMO" required>
-            </div>
-
-            <div class="input-field">
-              <label>¿Si fueras un gato, que tipo de gato serias?</label>
-              <input type="text" placeholder="" required>
-            </div>
-
-            <div class="input-field">
-              <label>¿Cuantos gatos nesecitas para destruir el mundo?</label>
-              <input type="number" placeholder="Ejemplo 666" required>
-            </div>
-
-            <div class="input-field">
-              <label>¿Cual es tu fecha favorita?</label>
-              <input type="date" placeholder="Culaquier fecha" required>
-            </div>
-
-            <div class="input-field">
-              <label>Dime un buen chiste</label>
-              <input type="text" placeholder="Tiene que ser bueno" required>
-            </div>
-          </div>
-
-          <div class="buttons">
-            <button class="sumbit">
-              <span class="btnText">Submit</span>
-              <i class="uil uil-navigator"></i>
-            </button>
-
-            <div class="backBtn">
-              <i class="uil uil-navigator"></i>
-              <span onclick="toggleForm()">Cancelar</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </body>
+
 </html>

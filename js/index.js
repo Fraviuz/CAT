@@ -33,10 +33,6 @@ function navigation(target, posicion) {
         document.getElementById(target).style.transform = 'translate3d(0px, -200vh, 0px)'
         setCurrentPosition(posicion)
     }
-    if (posicion==4) {
-        document.getElementById(target).style.transform = 'translate3d(0px, -300vh, 0px)'
-        setCurrentPosition(posicion)
-    }
 }
 
 // "EventListener" se encarga de identificar cuando es usado la rueda del mause y a que direccion, luego llama a la funcion "changePosition(direction)" con la dicha direccion que permite hacer un control para no trasladar la vista fuera del contenido.
@@ -60,7 +56,7 @@ function changePosition(direction) {
         setCurrentPosition(pos)
     }
 
-    if (pos < 4 && direction == 1){
+    if (pos < 3 && direction == 1){
         pos=pos+1
         navigation('base', pos)
         setCurrentPosition(pos)
