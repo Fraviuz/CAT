@@ -1,0 +1,15 @@
+1- Ajustar la navegacion del header y navegador lateral para que sea mas lento, similar al de la rueda del mouse.
+
+2- Ajustar la manera en la el texto de mapa se pociciona en móvil al igual que aumentar el tamaño del mapa
+
+3- Ajustar botones formulario
+
+4- Revisar texto por errores ortograficos
+
+5- Agregar la eliminada seccion entre mapa y formulario
+
+6- Agregar alerta y cerrado de pagina al elegir perro en el formulario
+
+7- Agregar lenguaje boca abajo como una opcion 
+
+
