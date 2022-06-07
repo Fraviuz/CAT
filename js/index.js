@@ -16,24 +16,44 @@ function getCurrentPosition(){
     return currentPosition
 }
 
-//La funcion "navigation()" cumple la funcion de trasladar el usuario a traves de las distintas partes de la paguina, en este caso 4 secciones, idealmente esto funcionaria de otra manera con un maximo definido antes. 
+// numeroPositionTranslale() toma el string de la propiedad translate en css y nos retorna solo el numero que corresponde a la pocion actual en Y 
 
-//Es necesario para que funcione los datos "target" (Este dato indica la seccion de la pagina donde se hace el traslado, en este caso es el id "base" que identifica al div contenedor del contenido principal) y "posicion" (Este dato indica la posicion a la cual el usuario se quere trasladar en la paguina)
+function numeroPositionTranslate(translate) {
+    let returnTranslate = ''
+    let comas = 0
+    
+    for (let index = 0; index < translate.length; index++) {
 
-function navigation(target, posicion) {
-    if (posicion==1) {
-        document.getElementById(target).style.transform = 'translate3d(0px, 0px, 0px)'
-        setCurrentPosition(posicion)
+        if (translate[index] == ',') {
+            comas++
+        } else if (comas == 1) {
+            returnTranslate = returnTranslate.concat(translate[index])
+        }
+        
     }
-    if (posicion==2) {
-        document.getElementById(target).style.transform = 'translate3d(0, -100vh, 0)'
-        setCurrentPosition(posicion)
-    }
-    if (posicion==3) {
-        document.getElementById(target).style.transform = 'translate3d(0px, -200vh, 0px)'
-        setCurrentPosition(posicion)
-    }
+
+    returnTranslate = returnTranslate.slice(0,returnTranslate.length-2)
+    return parseInt(returnTranslate)
 }
+
+// La funcion navigation() fue cambiada, ahora es necesario el objetivo a cambiar (target) y la operacion que se va a realizar en translate
+
+function navigation(target, operation) {
+
+    let currentPosition = numeroPositionTranslate(document.getElementById(target).style.transform)
+
+    // por defecto aun si es declarada en css currentPosition es NaN, por lo tanto se comprueba y cambie a 0 con la siguiente operacion
+
+    if (isNaN(currentPosition)){
+        currentPosition = 0
+    }
+
+    currentPosition = currentPosition + operation
+
+    document.getElementById(target).style.transform = 'translate3d(0,' + currentPosition + 'vh,0)'
+
+}
+
 
 // "EventListener" se encarga de identificar cuando es usado la rueda del mause y a que direccion, luego llama a la funcion "changePosition(direction)" con la dicha direccion que permite hacer un control para no trasladar la vista fuera del contenido.
 
@@ -46,20 +66,20 @@ window.addEventListener("wheel", event => {
     }
 });
 
+// changePosition() toma la direccion, -1 o 1 controla si es posible, cambia la posicion llamando navigation() y registra cual es con setCurrentPosition()
+
 function changePosition(direction) {
 
     let pos = getCurrentPosition()
 
     if (pos > 1 && direction == -1){
-        pos=pos-1
-        navigation('base', pos)
-        setCurrentPosition(pos)
+        navigation('base',+100)
+        setCurrentPosition(pos-1)
     }
 
     if (pos < 3 && direction == 1){
-        pos=pos+1
-        navigation('base', pos)
-        setCurrentPosition(pos)
+        navigation('base',-100)
+        setCurrentPosition(pos+1)
     }
 }
 

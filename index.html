@@ -18,12 +18,13 @@
 
       <header id="header-navigation-bar">
         <ul>
-          <li onclick="navigation('base', 1)"><i class="fa-solid fa-cat fa-2xl"></i></li>
-          <li class="cat" onclick="navigation('base', 1)">CATS!</li>
-          <li onclick="navigation('base', 2)">MAPA</li>
-          <li onclick="navigation('base', 3)">TU DATA</li>
+          <li><a href="#" class="link"><i class="fa-solid fa-cat fa-2xl"></i></a></li>
+          <li class="cat"><a href="#inicio" class="link" onclick="setCurrentPosition(1)">CATS!</a></li>
+          <li><a href="#map-section" class="link" onclick="setCurrentPosition(2)">MAPA</a></li>
+          <li><a href="#test-target" class="link" onclick="setCurrentPosition(3)">TU DATA</a></li> 
         </ul>
       </header>
+
       <div class="contenedor-contenido">
         <div>
           <h1>CATS! CATS? CATS!</h1>
@@ -40,7 +41,7 @@
     <!--Seccion del mapa-->
 
     <section class="section">
-      <div class="map-section">
+      <div id="map-section">
         <div class="contenedor-mapa"><iframe
             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2996803.887843598!2d136.80190690620793!3d34.62795698323473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scat%20cafe%20japan!5e0!3m2!1sen!2sar!4v1654263566119!5m2!1sen!2sar"
             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
@@ -59,7 +60,7 @@
     <!--Seccion de acceso al formulatio-->
 
     <section class="section" id="form-section">
-      <div>
+      <div id="test-target">
         <h1>¿Quieres hablar con nosotros?</h1>
         <p>¡Perfecto! Ya sea para dejar una crítica o para simplemente hablar con nosotros! (debido a la soledad de la
           vida moderna). <br> ¡Estamos más que disponibles!!, solo tiene que dejar sus datos y responder unas simples
@@ -75,9 +76,9 @@
 
   <nav id="navegador-lateral">
     <ul id="navedador-lateral-ul">
-      <li onclick="navigation('base', 1)"><i class="fa-solid fa-circle"></i></li>
-      <li onclick="navigation('base', 2)"><i class="fa-solid fa-circle"></i></li>
-      <li onclick="navigation('base', 3)"><i class="fa-solid fa-circle"></i></li>
+      <a href="#inicio" onclick="setCurrentPosition(1)"><li><i class="fa-solid fa-circle"></i></li></a>
+      <a href="#map-section" onclick="setCurrentPosition(2)"><li><i class="fa-solid fa-circle"></i></li></a>
+      <a href="#form-section" onclick="setCurrentPosition(3)"><li><i class="fa-solid fa-circle"></i></li></a>
     </ul>
   </nav>
 
