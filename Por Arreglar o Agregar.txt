@@ -1,15 +1,14 @@
-1- Ajustar la navegacion del header y navegador lateral para que sea mas lento, similar al de la rueda del mouse.
+- Cambiar onClick a listeners en JS
 
-2- Ajustar la manera en la el texto de mapa se pociciona en móvil al igual que aumentar el tamaño del mapa
+- Revisar texto por errores ortograficos
 
-3- Ajustar botones formulario
+- Agregar la eliminada seccion entre mapa y formulario
 
-4- Revisar texto por errores ortograficos
+- Agregar alerta y cerrado de pagina al elegir perro en el formulario
 
-5- Agregar la eliminada seccion entre mapa y formulario
+- Agregar lenguaje boca abajo como una opcion 
 
-6- Agregar alerta y cerrado de pagina al elegir perro en el formulario
+- Ajustar la navegacion del header y navegador lateral para que sea mas lento, similar al de la rueda del mouse. 
+    (Al parecer no es posible editar la velocidad de "scroll-behavior", por lo tanto si se quiere arreglar se necesita re diseñar la navegacion en PC de nuevo)
 
-7- Agregar lenguaje boca abajo como una opcion 
-
-
+- Idear como hacer que funcione cuando se cambie la orientacion de pantalla en Telefono

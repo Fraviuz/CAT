@@ -142,7 +142,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .texto-mapa {
-    grid-area: 4 / 3 / 5 / 6;
+    grid-area: 4 / 2 / 5 / 6;
     padding-left: 50%;
     padding-right: 5%;
 }
@@ -365,6 +365,7 @@ form .fields .input-field{
 .form-container form .btnText{
     font-size: 14px;
     font-weight: 400;
+    padding-left: 2px;
 }
 form button:hover{
     background-color: #265df2;
@@ -386,7 +387,12 @@ form .buttons button , .backBtn{
 
 /* Media breakpoints */
 
-@media (max-width: 1023px) {
+@media (max-width: 1280px) {
+    /* Navegador lateral izquierdo */
+    #navegador-lateral {
+        display: none;
+    }
+    
     /*mapa*/
     .texto-mapa {
         padding-left: 25%;
@@ -395,11 +401,6 @@ form .buttons button , .backBtn{
 }
 
 @media (max-width: 750px) {
-    /* Navegador lateral izquierdo */
-    #navegador-lateral {
-        display: none;
-    }
-    
     /* Inicio */
 
     #inicio > .contenedor-contenido{
@@ -438,8 +439,22 @@ form .buttons button , .backBtn{
     }
 
     /* Mapa */
+
+    #map-section{
+        grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+    }
+
     .texto-mapa {
         padding-left: 0%;
+        grid-area: 4 / 2 / 5 / 5;
+    }
+
+    .texto-mapa > h1{
+        font-size: 1.2rem;
+    }
+
+    .texto-mapa > p{
+        font-size: 0.8rem;
     }
 
     /* Formulario */

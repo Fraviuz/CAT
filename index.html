@@ -65,8 +65,10 @@
         <p>¡Perfecto! Ya sea para dejar una crítica o para simplemente hablar con nosotros! (debido a la soledad de la
           vida moderna). <br> ¡Estamos más que disponibles!!, solo tiene que dejar sus datos y responder unas simples
           preguntas!</p>
-        <button type="button" id="form-button" onclick="toggleForm()"><i
-            class="fa-solid fa-cat fa-2xl"></i>"mew"</button>
+        <button type="button" id="form-button" onclick="toggleForm()">
+          <i class="fa-solid fa-cat fa-2xl"></i>
+          <span>"mew"</span>
+        </button>
       </div>
     </section>
 
@@ -177,13 +179,13 @@
             <div class="buttons">
               <button class="sumbit">
                 <span class="btnText">Submit</span>
-                <i class="uil uil-navigator"></i>
+                <i class="fa-solid fa-check fa-lg"></i>
               </button>
 
-              <div class="backBtn">
-                <i class="uil uil-navigator"></i>
-                <span onclick="toggleForm()">Cancelar</span>
-              </div>
+              <button class="backBtn" onclick="toggleForm()">
+                <span class="btnText">Cancelar</span>
+                <i class="fa-solid fa-xmark fa-lg"></i>
+              </button>
             </div>
           </div>
         </div>

@@ -88,18 +88,35 @@ function changePosition(direction) {
 function toggleForm(){
     if (document.getElementById('plano-formulario').style.display=='none') {
         document.getElementById('plano-formulario').style.display = 'flex'
-        document.getElementById('navigator').style.display = 'none'
+        if (! isPhone()){
+            document.getElementById('navegador-lateral').style.display = 'none'
+        }
     } else {
         document.getElementById('plano-formulario').style.display = 'none'
-        document.getElementById('navigator').style.display = 'block'
+        if (! isPhone()){
+            document.getElementById('navegador-lateral').style.display = 'block'
+        }
     }
 }
 
-//Comprobante de movil para que puedan navegar la pagina
+//Comprueba si es un telefono para poder retornar la funcion de scroll
 
-if (screen.width > 1024){
+if (isPhone() == false){
     console.log('pass')
     document.body.style.overflowY = "hidden";
 } else {
     window.body.style.overflowY = "visible";
+}
+
+// Funcion isPhone() resta el ancho con el alto de la pantalla para ver si es un telelfono o no, retona true si es un telefono y falso si no lo es
+
+function isPhone(){
+
+    let screenSign = Math.sign(screen.width - screen.height)
+
+    if(screenSign == -1) {
+        return true
+    } else {
+        return false
+    }
 }
