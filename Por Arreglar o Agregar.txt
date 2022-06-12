@@ -1,14 +1,14 @@
 - Cambiar onClick a listeners en JS
 
-- Revisar texto por errores ortograficos
+- Actualizar los comentarios
 
-- Agregar la eliminada seccion entre mapa y formulario
+- Agregar la eliminada sección entre mapa y formulario
 
 - Agregar alerta y cerrado de pagina al elegir perro en el formulario
 
-- Agregar lenguaje boca abajo como una opcion 
+- Agregar lenguaje boca abajo como una opción 
 
-- Ajustar la navegacion del header y navegador lateral para que sea mas lento, similar al de la rueda del mouse. 
-    (Al parecer no es posible editar la velocidad de "scroll-behavior", por lo tanto si se quiere arreglar se necesita re diseñar la navegacion en PC de nuevo)
+- Ajustar la navegación del header y navegador lateral para que sea mas lento, similar al de la rueda del mouse. 
+    (Al parecer no es posible editar la velocidad de "scroll-behavior", por lo tanto si se quiere arreglar se necesita re diseñar la navegación en PC de nuevo)
 
-- Idear como hacer que funcione cuando se cambie la orientacion de pantalla en Telefono
+- Idear como hacer que funcione cuando se cambie la orientación de pantalla en Teléfono

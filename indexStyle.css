@@ -32,7 +32,7 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 } 
 
-/*-01 Seccion Inicio de la paguina*/
+/*-01 Sección Inicio de la pagina*/
 
 /*-A contenedor flex y sus hijos */
 
@@ -87,7 +87,7 @@ a, a:hover, a:focus, a:active {
     padding: 0.5rem 1.25rem 0.5rem 1.25rem;
 }
 
-/*-A.2 Contenido de seccion Inicio */
+/*-A.2 Contenido de sección Inicio */
 
 /* Estilo del texto */
 
@@ -209,21 +209,10 @@ a, a:hover, a:focus, a:active {
     height: 100%;
     padding-left: 3%;
     width: 10%;
-    top: 30%;
+    top: 40%;
 }
 
-#navegador-lateral-ul {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-
-#navedador-lateral-ul li {
+#navegador-lateral-ul li {
     width: auto;
     height: 25%;
     margin: 1.5rem;
@@ -233,7 +222,7 @@ a, a:hover, a:focus, a:active {
     transition: color 0.3s ease-in-out;
 }
 
-#navedador-lateral-ul li:hover {
+#navegador-lateral-ul li:hover {
     color: #0000004f;
 }
 

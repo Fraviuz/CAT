@@ -1,22 +1,22 @@
-//Java script es usado para permitir hacer un par de cosas, navegar la pagina por secciones a travez de la funcione "navigation" la cual es usada por es navegador que se encuentra a la izquerda, el navegador en el header y un "event listener" que observa cuando se usa la rueda del mause se mueve. La otra funcion que cumple es poder mostrar el formulario yesconderlo al ser cerrado o completado
+//Java script es usado para permitir hacer un par de cosas, navegar la pagina por secciones a través de la función "navigation" la cual es usada por el navegador que se encuentra a la izquierda, El header y un "event listener" que observa cuando se usa la rueda del mouse. La otra función que cumple es poder mostrar el formulario y esconderlo al ser cerrado o completado
 
-//la variable "curentPosition" permite a la funcion "changePosition" saber en que posicion de la pagine se encuetra el usuario, default es 1 que reprecenta el inicio de la pagina, ideal seria tambien definir el la posicion maxima y colocar todas estas propiedades y funciones en una clase
+//la variable "currentPosition" permite a la función "changePosition" saber en que posición de la pagine se encuentra el usuario, default es 1 que representa el inicio de la pagina, ideal seria también definir el la posición maxima y colocar todas estas propiedades y funciones en una clase
 
 var currentPosition = 1
 
-//la funcion "setCurrentPosition()" permite cambiar la posicion en "curentPosition" tomando como dato la pocicion a la que se desea cambiar
+//la función "setCurrentPosition()" permite cambiar la posición en "currentPosition" tomando como dato la posición a la que se desea cambiar
 
 function setCurrentPosition(position){
     currentPosition = position
 }
 
-//La funcion "getCurrentPosition()" permite saber en que pocision el usuario se encuentra en la pagina retornando el valor de la variable "currentPosition"
+//La función "getCurrentPosition()" permite saber en que posición el usuario se encuentra en la pagina retornando el valor de la variable "currentPosition"
 
 function getCurrentPosition(){
     return currentPosition
 }
 
-// numeroPositionTranslale() toma el string de la propiedad translate en css y nos retorna solo el numero que corresponde a la pocion actual en Y 
+// numeroPositionTranslate() toma el string de la propiedad translate en css y nos retorna solo el numero que corresponde a la poción actual en Y 
 
 function numeroPositionTranslate(translate) {
     let returnTranslate = ''
@@ -36,13 +36,13 @@ function numeroPositionTranslate(translate) {
     return parseInt(returnTranslate)
 }
 
-// La funcion navigation() fue cambiada, ahora es necesario el objetivo a cambiar (target) y la operacion que se va a realizar en translate
+// La función navigation() fue cambiada, ahora es necesario el objetivo a cambiar (target) y la operación que se va a realizar en translate
 
 function navigation(target, operation) {
 
     let currentPosition = numeroPositionTranslate(document.getElementById(target).style.transform)
 
-    // por defecto aun si es declarada en css currentPosition es NaN, por lo tanto se comprueba y cambie a 0 con la siguiente operacion
+    // por defecto aun si es declarada en css currentPosition es NaN, por lo tanto se comprueba y cambie a 0 con la siguiente operación
 
     if (isNaN(currentPosition)){
         currentPosition = 0
@@ -55,9 +55,9 @@ function navigation(target, operation) {
 }
 
 
-// "EventListener" se encarga de identificar cuando es usado la rueda del mause y a que direccion, luego llama a la funcion "changePosition(direction)" con la dicha direccion que permite hacer un control para no trasladar la vista fuera del contenido.
+// "EventListener" se encarga de identificar cuando es usado la rueda del mouse y a que dirección, luego llama a la función "changePosition(direction)" con la dicha dirección que permite hacer un control para no trasladar la vista fuera del contenido.
 
-// Se agrego una condicion screen width para que solo funcione en PC y laptops, hay otras maneras de hacerlo pero esta evita un problema donde cuado se reverte se puede navegar fuera de la pantalla, otra opcion es ver en que pocicion el usuario se encuentra.
+// Se agrego una condición screen width para que solo funcione en PC y laptops, hay otras maneras de hacerlo pero esta evita un problema donde cuando se revierte se puede navegar fuera de la pantalla, otra opción es ver en que posición el usuario se encuentra.
 
 window.addEventListener("wheel", event => {
     let delta = Math.sign(event.deltaY);
@@ -66,7 +66,7 @@ window.addEventListener("wheel", event => {
     }
 });
 
-// changePosition() toma la direccion, -1 o 1 controla si es posible, cambia la posicion llamando navigation() y registra cual es con setCurrentPosition()
+// changePosition() toma la dirección, -1 o 1 controla si es posible, cambia la posición llamando navigation() y registra cual es con setCurrentPosition()
 
 function changePosition(direction) {
 
@@ -83,7 +83,7 @@ function changePosition(direction) {
     }
 }
 
-// La funcion "toggleForm()" permite mostrar y ocultar tanto el formulario indicado por "form-container" y el navegador lateral indicado por "navigator", hay un control que permite identificar cual va a mostrar y ocultar.
+// La función "toggleForm()" permite mostrar y ocultar tanto el formulario indicado por "form-container" y el navegador lateral indicado por "navigator", hay un control que permite identificar cual va a mostrar y ocultar.
 
 function toggleForm(){
     if (document.getElementById('plano-formulario').style.display=='none') {
@@ -99,7 +99,7 @@ function toggleForm(){
     }
 }
 
-//Comprueba si es un telefono para poder retornar la funcion de scroll
+//Comprueba si es un teléfono para poder retornar la función de scroll
 
 if (isPhone() == false){
     console.log('pass')
@@ -108,7 +108,7 @@ if (isPhone() == false){
     window.body.style.overflowY = "visible";
 }
 
-// Funcion isPhone() resta el ancho con el alto de la pantalla para ver si es un telelfono o no, retona true si es un telefono y falso si no lo es
+// Función isPhone() resta el ancho con el alto de la pantalla para ver si es un teléfono o no, retorna true si es un teléfono y falso si no lo es
 
 function isPhone(){
 
